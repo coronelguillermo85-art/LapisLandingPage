@@ -56,7 +56,7 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 
 ## 🚀 Demo en vivo
 
-👉 [**Ver landing page en Vercel**](https://tu-proyecto.vercel.app)  
+👉 [**Ver landing page en Vercel**](https://lapis-landing-page.vercel.app/)  
 *(Reemplazá este enlace con el que te genere Vercel cuando lo subas)*
 
 <br>
