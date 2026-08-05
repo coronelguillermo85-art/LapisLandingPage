@@ -60,3 +60,5 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 <br>
 
 ## 📂 Estructura del proyecto
+
+Ver aquí : https://lapis-landing-page.vercel.app/
