@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Del Deseo al Proyecto · LAPIS</title>
-    <!-- Fuentes y Estilos Base -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <style>
-        /* Reset y variables */
+        /* ===== RESET ===== */
         * {
             margin: 0;
             padding: 0;
@@ -28,19 +27,21 @@
             padding: 0 24px;
         }
 
-        /* Colores y tipografía */
+        /* ===== VARIABLES ===== */
         :root {
-            --primary: #c44536; /* Terracota */
+            --primary: #c44536;
             --primary-dark: #a33428;
-            --secondary: #2b2d42; /* Azul grisáceo oscuro */
-            --accent: #e9c46a; /* Dorado suave */
+            --secondary: #2b2d42;
+            --accent: #e9c46a;
             --light-bg: #f4f1ed;
             --white: #ffffff;
             --text-light: #4a4a5a;
             --shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -62,7 +63,7 @@
             border-bottom: none;
         }
 
-        /* Botones */
+        /* ===== BOTONES ===== */
         .btn {
             display: inline-block;
             padding: 16px 40px;
@@ -75,6 +76,7 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
             box-shadow: 0 4px 14px rgba(196, 69, 54, 0.3);
+            cursor: pointer;
         }
         .btn:hover {
             background-color: var(--primary-dark);
@@ -91,8 +93,15 @@
             background: var(--primary);
             color: white;
         }
+        .btn-secondary {
+            background: var(--secondary);
+            box-shadow: 0 4px 14px rgba(43, 45, 66, 0.3);
+        }
+        .btn-secondary:hover {
+            background: #1a1a2e;
+        }
 
-        /* HEADER/HERO */
+        /* ===== HERO ===== */
         .hero {
             padding: 40px 0 80px 0;
             background: linear-gradient(165deg, #ffffff 0%, #f4f0eb 100%);
@@ -153,7 +162,7 @@
             display: inline-block;
             margin-bottom: 40px;
             font-weight: 400;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .hero-actions {
             display: flex;
@@ -176,7 +185,7 @@
             color: var(--primary);
         }
 
-        /* Componentes Grid */
+        /* ===== COMPONENTES ===== */
         .grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -224,7 +233,7 @@
             letter-spacing: 0.5px;
         }
 
-        /* Enfoque */
+        /* ===== ENFOQUE ===== */
         .enfoque-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -252,7 +261,7 @@
             color: var(--text-light);
         }
 
-        /* Audiencia / Resultados */
+        /* ===== DOS COLUMNAS ===== */
         .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -275,7 +284,7 @@
             margin-top: 4px;
         }
 
-        /* Modalidades */
+        /* ===== MODALIDADES ===== */
         .modalidad-card {
             background: white;
             border-radius: 24px;
@@ -308,8 +317,19 @@
         .modalidad-card ul li i {
             color: var(--primary);
         }
+        .modalidad-card .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .modalidad-card .btn-group .btn {
+            flex: 1;
+            text-align: center;
+            min-width: 140px;
+        }
 
-        /* Testimonios */
+        /* ===== TESTIMONIOS ===== */
         .testimonial-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -334,7 +354,7 @@
             color: var(--primary);
         }
 
-        /* Equipo */
+        /* ===== EQUIPO ===== */
         .team-card {
             display: flex;
             gap: 30px;
@@ -360,7 +380,7 @@
             color: var(--primary);
         }
 
-        /* CTA FINAL */
+        /* ===== CTA FINAL ===== */
         .cta-section {
             background: var(--secondary);
             color: white;
@@ -376,6 +396,12 @@
             margin: 0 auto 30px;
             opacity: 0.9;
         }
+        .cta-section .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .cta-section .btn {
             background: var(--accent);
             color: var(--secondary);
@@ -385,11 +411,21 @@
             background: #f0d47a;
             border-color: #f0d47a;
         }
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+            box-shadow: none;
+        }
+        .cta-section .btn-secondary:hover {
+            background: white;
+            color: var(--secondary);
+        }
 
-        /* Footer */
+        /* ===== FOOTER ===== */
         .footer {
             background: #1a1a2e;
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             padding: 40px 0;
             text-align: center;
         }
@@ -400,7 +436,7 @@
         .footer .social a {
             display: inline-block;
             margin: 0 10px;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             transition: 0.2s;
             font-size: 1.6rem;
         }
@@ -408,257 +444,504 @@
             color: var(--accent);
         }
 
-        /* Responsive */
+        /* ===== CRÉDITOS DEL AUTOR ===== */
+        .author-credit {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .author-credit a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .author-credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== MODAL DEL FORMULARIO (OPCIONAL) ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 24px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-box .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: 0.2s;
+            background: none;
+            border: none;
+        }
+        .modal-box .close-modal:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+        .modal-box h2 {
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        .modal-box label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+        .modal-box input,
+        .modal-box select,
+        .modal-box textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .modal-box input:focus,
+        .modal-box select:focus,
+        .modal-box textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(196, 69, 54, 0.2);
+        }
+        .modal-box .btn {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
-            .grid-4 { grid-template-columns: 1fr 1fr; }
-            .two-col { grid-template-columns: 1fr; gap: 30px; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-            .enfoque-grid { grid-template-columns: 1fr; }
+            .grid-4 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .enfoque-grid {
+                grid-template-columns: 1fr;
+            }
         }
         @media (max-width: 600px) {
-            .hero h1 { font-size: 2.8rem; }
-            .grid-4 { grid-template-columns: 1fr; }
-            .team-card { flex-direction: column; text-align: center; }
-            .modalidad-card { padding: 24px; }
-            .hero-actions { flex-direction: column; align-items: center; }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .team-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .modalidad-card {
+                padding: 24px;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .modalidad-card .btn-group {
+                flex-direction: column;
+            }
+            .cta-section .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- HERO -->
-<header class="hero">
-    <div class="container hero-content">
-        <div class="hero-badge">
-            <i class="fas fa-flask"></i>
-            <a href="https://lapisac.wixsite.com/lapis" target="_blank">LAPIS</a> · Laboratorio de Prácticas e Investigaciones Sociales
+    <!-- ============================================================ -->
+    <!-- HERO -->
+    <!-- ============================================================ -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-flask"></i>
+                <a href="https://lapisac.wixsite.com/lapis" target="_blank">LAPIS</a> · Laboratorio de Prácticas e Investigaciones Sociales
+            </div>
+            <h1>Del <span>Deseo</span> al <span>Proyecto</span></h1>
+            <p class="hero-sub">Prácticas para intervenir lo posible en clave de igualdad.</p>
+            <div class="hero-claim">
+                <i class="fas fa-arrow-right" style="margin-right: 12px;"></i> No es un curso de proyectos. Es un espacio para hacerlos posibles.
+            </div>
+            <div class="hero-actions">
+                <!-- Botón INSCRIPCIÓN → abre modal con formulario (o redirige a Google Form) -->
+                <button class="btn" id="openModalBtn"><i class="fas fa-pen"></i> Inscribirme ahora</button>
+                <!-- Botón CONSULTAS → mailto -->
+                <a href="mailto:lapis.ac@gmail.com?subject=Consulta%20sobre%20Del%20Deseo%20al%20Proyecto" class="btn btn-outline"><i class="fas fa-envelope"></i> Consultar</a>
+            </div>
+            <blockquote class="hero-quote">
+                “La preocupación no es la velocidad, sino la dirección del desarrollo.” <br /><strong>— Carlos Matus</strong>
+            </blockquote>
         </div>
-        <h1>Del <span>Deseo</span> al <span>Proyecto</span></h1>
-        <p class="hero-sub">Prácticas para intervenir lo posible en clave de igualdad.</p>
-        <div class="hero-claim">
-            <i class="fas fa-arrow-right" style="margin-right: 12px;"></i> No es un curso de proyectos. Es un espacio para hacerlos posibles.
-        </div>
-        <div class="hero-actions">
-            <a href="mailto:lapis.ac@gmail.com?subject=Inscripción%20Del%20Deseo%20al%20Proyecto" class="btn">Quiero inscribirme</a>
-            <a href="#modalidades" class="btn btn-outline">Conocer modalidades</a>
-        </div>
-        <blockquote class="hero-quote">
-            “La preocupación no es la velocidad, sino la dirección del desarrollo.” <br><strong>— Carlos Matus</strong>
-        </blockquote>
-    </div>
-</header>
+    </header>
 
-<!-- QUÉ ES -->
-<section class="section" id="que-es">
-    <div class="container">
-        <h2><i class="fas fa-compass"></i> ¿Qué es?</h2>
-        <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 20px;">
-            <strong>Del Deseo al Proyecto</strong> es un laboratorio de formación y acción orientado a acompañar la construcción y fortalecimiento de iniciativas de desarrollo desde una perspectiva estratégica y con enfoque de equidad.
-        </p>
-        <p style="font-size: 1.1rem; color: var(--text-light); max-width: 800px;">
-            Los proyectos no son neutros. Son decisiones situadas que producen efectos en la realidad. Por eso, articulamos herramientas de diseño, planificación, gestión y evaluación con un trabajo activo sobre el <strong>deseo</strong>, la <strong>toma de decisiones</strong> y la <strong>intervención en contextos situados</strong>.
-        </p>
-    </div>
-</section>
+    <!-- ============================================================ -->
+    <!-- QUÉ ES -->
+    <!-- ============================================================ -->
+    <section class="section" id="que-es">
+        <div class="container">
+            <h2><i class="fas fa-compass"></i> ¿Qué es?</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 20px;">
+                <strong>Del Deseo al Proyecto</strong> es un laboratorio de formación y acción orientado a acompañar la construcción y fortalecimiento de iniciativas de desarrollo desde una perspectiva estratégica y con enfoque de equidad.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-light); max-width: 800px;">
+                Los proyectos no son neutros. Son decisiones situadas que producen efectos en la realidad. Por eso, articulamos herramientas de diseño, planificación, gestión y evaluación con un trabajo activo sobre el <strong>deseo</strong>, la <strong>toma de decisiones</strong> y la <strong>intervención en contextos situados</strong>.
+            </p>
+        </div>
+    </section>
 
-<!-- COMPONENTES -->
-<section class="section" style="background: var(--light-bg);">
-    <div class="container">
-        <h2 style="text-align: center;"><i class="fas fa-puzzle-piece"></i> Componentes</h2>
-        <div class="grid-4">
-            <div class="comp-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>Trama de formación</h3>
-                <p>Conceptos, enfoques y herramientas para el diseño, planificación, implementación y evaluación de proyectos.</p>
-                <span class="badge">Enfoque de equidad</span>
+    <!-- ============================================================ -->
+    <!-- COMPONENTES -->
+    <!-- ============================================================ -->
+    <section class="section" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 style="text-align: center;"><i class="fas fa-puzzle-piece"></i> Componentes</h2>
+            <div class="grid-4">
+                <div class="comp-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Trama de formación</h3>
+                    <p>Conceptos, enfoques y herramientas para el diseño, planificación, implementación y evaluación de proyectos.</p>
+                    <span class="badge">Enfoque de equidad</span>
+                </div>
+                <div class="comp-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Clínica de proyectos</h3>
+                    <p>Mentoría para desarrollar proyectos propios, ajustando objetivos, indicadores, viabilidad y coherencia.</p>
+                    <span class="badge">Acompañamiento personalizado</span>
+                </div>
+                <div class="comp-card">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h3>Radar de oportunidades</h3>
+                    <p>Recursos actualizados de convocatorias, experiencias y materiales para conectar proyectos con el mundo.</p>
+                    <span class="badge">Conexión estratégica</span>
+                </div>
+                <div class="comp-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Comunidad de prácticas</h3>
+                    <p>Intercambio, colaboración y construcción colectiva para potenciar alianzas y aprendizajes.</p>
+                    <span class="badge">Red de colaboración</span>
+                </div>
             </div>
-            <div class="comp-card">
-                <i class="fas fa-stethoscope"></i>
-                <h3>Clínica de proyectos</h3>
-                <p>Mentoría para desarrollar proyectos propios, ajustando objetivos, indicadores, viabilidad y coherencia.</p>
-                <span class="badge">Acompañamiento personalizado</span>
-            </div>
-            <div class="comp-card">
-                <i class="fas fa-satellite-dish"></i>
-                <h3>Radar de oportunidades</h3>
-                <p>Recursos actualizados de convocatorias, experiencias y materiales para conectar proyectos con el mundo.</p>
-                <span class="badge">Conexión estratégica</span>
-            </div>
-            <div class="comp-card">
-                <i class="fas fa-handshake"></i>
-                <h3>Comunidad de prácticas</h3>
-                <p>Intercambio, colaboración y construcción colectiva para potenciar alianzas y aprendizajes.</p>
-                <span class="badge">Red de colaboración</span>
+            <p style="text-align: center; margin-top: 40px; font-weight: 600; color: var(--primary);">
+                <i class="fas fa-egg"></i> El enfoque de equidad es un lente transversal que orienta decisiones, no decora discursos.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ENFOQUE + DIMENSIONES -->
+    <!-- ============================================================ -->
+    <section class="section">
+        <div class="container">
+            <h2><i class="fas fa-route"></i> Enfoque</h2>
+            <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 20px;">
+                Articulamos formación conceptual, clínica de acompañamiento, acceso a oportunidades y construcción de redes.
+            </p>
+            <div class="enfoque-grid">
+                <div class="enfoque-item">
+                    <i class="fas fa-heart"></i>
+                    <h4>Deseo</h4>
+                    <p>Lo que impulsa. El motor subjetivo y colectivo que da sentido a la acción.</p>
+                </div>
+                <div class="enfoque-item">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h4>Diseño</h4>
+                    <p>Lo que ordena. La arquitectura que transforma una idea en un proyecto viable.</p>
+                </div>
+                <div class="enfoque-item">
+                    <i class="fas fa-rocket"></i>
+                    <h4>Acción</h4>
+                    <p>Lo que transforma. La intervención situada que produce cambios en la realidad.</p>
+                </div>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 40px; font-weight: 600; color: var(--primary);">
-            <i class="fas fa-egg"></i> El enfoque de equidad es un lente transversal que orienta decisiones, no decora discursos.
-        </p>
-    </div>
-</section>
+    </section>
 
-<!-- ENFOQUE + DIMENSIONES -->
-<section class="section">
-    <div class="container">
-        <h2><i class="fas fa-route"></i> Enfoque</h2>
-        <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 20px;">
-            Articulamos formación conceptual, clínica de acompañamiento, acceso a oportunidades y construcción de redes.
-        </p>
-        <div class="enfoque-grid">
-            <div class="enfoque-item">
-                <i class="fas fa-heart"></i>
-                <h4>Deseo</h4>
-                <p>Lo que impulsa. El motor subjetivo y colectivo que da sentido a la acción.</p>
-            </div>
-            <div class="enfoque-item">
-                <i class="fas fa-drafting-compass"></i>
-                <h4>Diseño</h4>
-                <p>Lo que ordena. La arquitectura que transforma una idea en un proyecto viable.</p>
-            </div>
-            <div class="enfoque-item">
-                <i class="fas fa-rocket"></i>
-                <h4>Acción</h4>
-                <p>Lo que transforma. La intervención situada que produce cambios en la realidad.</p>
+    <!-- ============================================================ -->
+    <!-- AUDIENCIA + RESULTADOS -->
+    <!-- ============================================================ -->
+    <section class="section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <h2><i class="fas fa-users"></i> ¿Quiénes pueden participar?</h2>
+                    <ul class="list-check">
+                        <li><i class="fas fa-check-circle"></i> Profesionales que trabajan en proyectos de desarrollo</li>
+                        <li><i class="fas fa-check-circle"></i> Referentes de organizaciones sociales y entidades académicas</li>
+                        <li><i class="fas fa-check-circle"></i> Funcionarias/os y equipos técnicos gubernamentales</li>
+                        <li><i class="fas fa-check-circle"></i> Personas con ideas o iniciativas que buscan concretarse</li>
+                    </ul>
+                    <p style="margin-top: 20px; font-weight: 300;"><i class="fas fa-plus-circle" style="color: var(--primary);"></i> No se requieren conocimientos previos.</p>
+                </div>
+                <div>
+                    <h2><i class="fas fa-bullseye"></i> Resultados</h2>
+                    <ul class="list-check">
+                        <li><i class="fas fa-check-circle"></i> Herramientas concretas para diseñar, implementar y evaluar proyectos.</li>
+                        <li><i class="fas fa-check-circle"></i> Desarrollo (o reformulación) de una iniciativa propia.</li>
+                        <li><i class="fas fa-check-circle"></i> Mayor claridad estratégica para intervenir en tu contexto.</li>
+                        <li><i class="fas fa-check-circle"></i> Acceso a un portal de oportunidades y recursos.</li>
+                        <li><i class="fas fa-check-circle"></i> Comunidad de intercambio, colaboración y construcción colectiva.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- AUDIENCIA + RESULTADOS -->
-<section class="section" style="background: var(--light-bg);">
-    <div class="container">
-        <div class="two-col">
-            <div>
-                <h2><i class="fas fa-users"></i> ¿Quiénes pueden participar?</h2>
-                <ul class="list-check">
-                    <li><i class="fas fa-check-circle"></i> Profesionales que trabajan en proyectos de desarrollo</li>
-                    <li><i class="fas fa-check-circle"></i> Referentes de organizaciones sociales y entidades académicas</li>
-                    <li><i class="fas fa-check-circle"></i> Funcionarias/os y equipos técnicos gubernamentales</li>
-                    <li><i class="fas fa-check-circle"></i> Personas con ideas o iniciativas que buscan concretarse</li>
-                </ul>
-                <p style="margin-top: 20px; font-weight: 300;"><i class="fas fa-plus-circle" style="color: var(--primary);"></i> No se requieren conocimientos previos.</p>
+    <!-- ============================================================ -->
+    <!-- MODALIDADES -->
+    <!-- ============================================================ -->
+    <section class="section" id="modalidades">
+        <div class="container">
+            <h2 style="text-align: center;"><i class="fas fa-ticket-alt"></i> Modalidades de participación</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+                <div class="modalidad-card">
+                    <h3><i class="fas fa-star" style="color: var(--accent);"></i> Programa completo</h3>
+                    <p><strong>Formación + Clínica + Comunidad</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 4 clases de 2h (diseño, planificación, gestión, evaluación)</li>
+                        <li><i class="fas fa-check"></i> Clínica de proyectos personalizada</li>
+                        <li><i class="fas fa-check"></i> Radar de oportunidades + red de prácticas</li>
+                    </ul>
+                    <p class="precio">Para quienes necesitan estructurar o fortalecer un proyecto desde sus bases.</p>
+                    <div class="btn-group">
+                        <button class="btn" onclick="openModal()"><i class="fas fa-pen"></i> Quiero esta modalidad</button>
+                        <a href="mailto:lapis.ac@gmail.com?subject=Programa%20completo%20-%20Del%20Deseo%20al%20Proyecto" class="btn btn-outline"><i class="fas fa-envelope"></i> Consultar</a>
+                    </div>
+                </div>
+                <div class="modalidad-card">
+                    <h3><i class="fas fa-bolt" style="color: var(--accent);"></i> Clínica + Comunidad</h3>
+                    <p><strong>Modalidad intensiva – 3 sesiones</strong></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Avance sobre iniciativas en curso</li>
+                        <li><i class="fas fa-check"></i> Ajuste de objetivos, indicadores, planificación y alianzas</li>
+                        <li><i class="fas fa-check"></i> Incluye radar de oportunidades + red de prácticas</li>
+                    </ul>
+                    <p class="precio">Ideal para destrabar decisiones y fortalecer viabilidad.</p>
+                    <div class="btn-group">
+                        <button class="btn" onclick="openModal()"><i class="fas fa-pen"></i> Quiero esta modalidad</button>
+                        <a href="mailto:lapis.ac@gmail.com?subject=Clínica%20+%20Comunidad%20-%20Del%20Deseo%20al%20Proyecto" class="btn btn-outline"><i class="fas fa-envelope"></i> Consultar</a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h2><i class="fas fa-bullseye"></i> Resultados</h2>
-                <ul class="list-check">
-                    <li><i class="fas fa-check-circle"></i> Herramientas concretas para diseñar, implementar y evaluar proyectos.</li>
-                    <li><i class="fas fa-check-circle"></i> Desarrollo (o reformulación) de una iniciativa propia.</li>
-                    <li><i class="fas fa-check-circle"></i> Mayor claridad estratégica para intervenir en tu contexto.</li>
-                    <li><i class="fas fa-check-circle"></i> Acceso a un portal de oportunidades y recursos.</li>
-                    <li><i class="fas fa-check-circle"></i> Comunidad de intercambio, colaboración y construcción colectiva.</li>
-                </ul>
+            <p style="text-align: center; margin-top: 30px; font-size: 0.95rem; color: var(--text-light);">
+                <i class="fas fa-laptop"></i> Modalidad adaptada virtual o presencial.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- TESTIMONIOS -->
+    <!-- ============================================================ -->
+    <section class="section" style="background: var(--light-bg);">
+        <div class="container">
+            <h2 style="text-align: center;"><i class="fas fa-quote-left"></i> Voces de la experiencia</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>“Aprendí a diseñar proyectos con método, perspectiva de género y sobre todo a ser inclusivo.”</p>
+                    <div class="autor">— Participante de la cohorte 2024</div>
+                </div>
+                <div class="testimonial">
+                    <p>“Aprendí a pensar indicadores para hacer seguimiento de progresos. Disfruté muchísimo el enfoque interdisciplinario y el intercambio.”</p>
+                    <div class="autor">— Integrante de organización social</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- MODALIDADES -->
-<section class="section" id="modalidades">
-    <div class="container">
-        <h2 style="text-align: center;"><i class="fas fa-ticket-alt"></i> Modalidades de participación</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
-            <div class="modalidad-card">
-                <h3><i class="fas fa-star" style="color: var(--accent);"></i> Programa completo</h3>
-                <p><strong>Formación + Clínica + Comunidad</strong></p>
-                <ul>
-                    <li><i class="fas fa-check"></i> 4 clases de 2h (diseño, planificación, gestión, evaluación)</li>
-                    <li><i class="fas fa-check"></i> Clínica de proyectos personalizada</li>
-                    <li><i class="fas fa-check"></i> Radar de oportunidades + red de prácticas</li>
-                </ul>
-                <p class="precio">Para quienes necesitan estructurar o fortalecer un proyecto desde sus bases.</p>
-                <a href="mailto:lapis.ac@gmail.com?subject=Programa%20completo%20-%20Del%20Deseo%20al%20Proyecto" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Quiero esta modalidad</a>
+    <!-- ============================================================ -->
+    <!-- EQUIPO -->
+    <!-- ============================================================ -->
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center;"><i class="fas fa-user-tie"></i> Dirección del programa</h2>
+            <div class="team-card" style="max-width: 900px; margin: 30px auto;">
+                <div>
+                    <img src="https://ui-avatars.com/api/?name=Sabrina+Landoni&size=140&background=c44536&color=fff&font-size=0.5" alt="Sabrina Landoni">
+                </div>
+                <div>
+                    <h3>Sabrina Landoni</h3>
+                    <p class="rol">Especialista en gestión de programas de cooperación internacional</p>
+                    <p>Más de 20 años de experiencia en planificación estratégica, implementación, monitoreo y evaluación con enfoque de equidad, derechos humanos y desarrollo sostenible en el Cono Sur.</p>
+                    <p style="margin-top: 10px;">
+                        <i class="fab fa-linkedin" style="color: var(--primary);"></i>
+                        <a href="https://www.linkedin.com/in/sabrinalandoni" target="_blank" style="color: var(--secondary);">linkedin.com/in/sabrinalandoni</a>
+                    </p>
+                </div>
             </div>
-            <div class="modalidad-card">
-                <h3><i class="fas fa-bolt" style="color: var(--accent);"></i> Clínica + Comunidad</h3>
-                <p><strong>Modalidad intensiva – 3 sesiones</strong></p>
-                <ul>
-                    <li><i class="fas fa-check"></i> Avance sobre iniciativas en curso</li>
-                    <li><i class="fas fa-check"></i> Ajuste de objetivos, indicadores, planificación y alianzas</li>
-                    <li><i class="fas fa-check"></i> Incluye radar de oportunidades + red de prácticas</li>
-                </ul>
-                <p class="precio">Ideal para destrabar decisiones y fortalecer viabilidad.</p>
-                <a href="mailto:lapis.ac@gmail.com?subject=Clínica%20+%20Comunidad%20-%20Del%20Deseo%20al%20Proyecto" class="btn btn-outline" style="width: 100%; text-align: center; margin-top: 20px;">Consultar</a>
-            </div>
-        </div>
-        <p style="text-align: center; margin-top: 30px; font-size: 0.95rem; color: var(--text-light);">
-            <i class="fas fa-laptop"></i> Modalidad adaptada virtual o presencial.
-        </p>
-    </div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section class="section" style="background: var(--light-bg);">
-    <div class="container">
-        <h2 style="text-align: center;"><i class="fas fa-quote-left"></i> Voces de la experiencia</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <p>“Aprendí a diseñar proyectos con método, perspectiva de género y sobre todo a ser inclusivo.”</p>
-                <div class="autor">— Participante de la cohorte 2024</div>
-            </div>
-            <div class="testimonial">
-                <p>“Aprendí a pensar indicadores para hacer seguimiento de progresos. Disfruté muchísimo el enfoque interdisciplinario y el intercambio.”</p>
-                <div class="autor">— Integrante de organización social</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- EQUIPO -->
-<section class="section">
-    <div class="container">
-        <h2 style="text-align: center;"><i class="fas fa-user-tie"></i> Dirección del programa</h2>
-        <div class="team-card" style="max-width: 900px; margin: 30px auto;">
-            <div>
-                <img src="https://ui-avatars.com/api/?name=Sabrina+Landoni&size=140&background=c44536&color=fff&font-size=0.5" alt="Sabrina Landoni">
-            </div>
-            <div>
-                <h3>Sabrina Landoni</h3>
-                <p class="rol">Especialista en gestión de programas de cooperación internacional</p>
-                <p>Más de 20 años de experiencia en planificación estratégica, implementación, monitoreo y evaluación con enfoque de equidad, derechos humanos y desarrollo sostenible en el Cono Sur.</p>
+            <div style="text-align: center; margin-top: 40px;">
+                <p><strong>LAPIS</strong> · Laboratorio de Prácticas e Investigaciones Sociales</p>
+                <p style="color: var(--text-light);">20 años diseñando estrategias de transformación social con enfoque de género.</p>
                 <p style="margin-top: 10px;">
-                    <i class="fab fa-linkedin" style="color: var(--primary);"></i>
-                    <a href="https://www.linkedin.com/in/sabrinalandoni" target="_blank" style="color: var(--secondary);">linkedin.com/in/sabrinalandoni</a>
+                    <a href="https://lapisac.wixsite.com/lapis" target="_blank" style="color: var(--primary);">lapisac.wixsite.com/lapis</a>
                 </p>
             </div>
         </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <p><strong>LAPIS</strong> · Laboratorio de Prácticas e Investigaciones Sociales</p>
-            <p style="color: var(--text-light);">20 años diseñando estrategias de transformación social con enfoque de género.</p>
-            <p style="margin-top: 10px;">
-                <a href="https://lapisac.wixsite.com/lapis" target="_blank" style="color: var(--primary);">lapisac.wixsite.com/lapis</a>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CTA FINAL / INSCRIPCIÓN -->
+    <!-- ============================================================ -->
+    <section class="cta-section" id="inscripcion">
+        <div class="container">
+            <h2><i class="fas fa-pen-fancy"></i> ¿Lista/o para convertir tu deseo en proyecto?</h2>
+            <p>Acompañamos sueños y desafíos en resultados con impacto positivo. Sumate a la próxima cohorte.</p>
+            <div class="btn-group">
+                <button class="btn" onclick="openModal()"><i class="fas fa-pen"></i> Inscribirme ahora</button>
+                <a href="mailto:lapis.ac@gmail.com?subject=Consulta%20sobre%20Del%20Deseo%20al%20Proyecto" class="btn btn-secondary"><i class="fas fa-envelope"></i> Hacer una consulta</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
+                <i class="fas fa-envelope"></i> <a href="mailto:lapis.ac@gmail.com" style="color: white; text-decoration: underline;">lapis.ac@gmail.com</a> ·
+                <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lapis.asoc.civil/" target="_blank" style="color: white; text-decoration: underline;">@lapis.asoc.civil</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- MODAL DEL FORMULARIO DE INSCRIPCIÓN -->
+    <!-- ============================================================ -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <button class="close-modal" id="closeModalBtn">&times;</button>
+            <h2><i class="fas fa-pen" style="color: var(--primary);"></i> Formulario de inscripción</h2>
+            <p style="margin-bottom: 20px; color: var(--text-light);">Completá tus datos y nos pondremos en contacto para confirmar tu lugar.</p>
+
+            <!-- 
+                ⚠️ IMPORTANTE: 
+                Podés reemplazar este formulario por el embed de Google Forms o cualquier otro.
+                Si usás Google Forms, copiá el código <iframe> que te da Google y reemplazá todo este bloque.
+                También podés cambiar el action a la URL de tu backend si tenés uno.
+            -->
+            <form id="inscripcionForm" action="https://formsubmit.co/lapis.ac@gmail.com" method="POST">
+                <!-- Opcional: ocultar el campo de asunto -->
+                <input type="hidden" name="_subject" value="Nueva inscripción - Del Deseo al Proyecto">
+                <input type="hidden" name="_captcha" value="false">
+
+                <label for="nombre">Nombre y apellido *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej: María Gómez">
+
+                <label for="email">Correo electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+
+                <label for="telefono">Teléfono (opcional)</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="11 1234 5678">
+
+                <label for="modalidad">Modalidad de interés *</label>
+                <select id="modalidad" name="modalidad" required>
+                    <option value="">Seleccioná una opción</option>
+                    <option value="programa-completo">Programa completo (Formación + Clínica + Comunidad)</option>
+                    <option value="clinica-comunidad">Clínica + Comunidad (intensiva)</option>
+                </select>
+
+                <label for="mensaje">¿Algo más que quieras contarnos?</label>
+                <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos sobre tu proyecto o qué te motiva a participar..."></textarea>
+
+                <button type="submit" class="btn" style="background: var(--primary);"><i class="fas fa-paper-plane"></i> Enviar inscripción</button>
+            </form>
+
+            <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-light);">
+                <i class="fas fa-lock" style="color: var(--primary);"></i> Tus datos están seguros. Solo los usaremos para contactarte.
             </p>
         </div>
     </div>
-</section>
 
-<!-- CTA FINAL / INSCRIPCIÓN -->
-<section class="cta-section" id="inscripcion">
-    <div class="container">
-        <h2><i class="fas fa-pen-fancy"></i> ¿Lista/o para convertir tu deseo en proyecto?</h2>
-        <p>Acompañamos sueños y desafíos en resultados con impacto positivo. Sumate a la próxima cohorte.</p>
-        <a href="mailto:lapis.ac@gmail.com?subject=Inscripción%20Del%20Deseo%20al%20Proyecto" class="btn" style="font-size: 1.3rem; padding: 18px 50px;">Inscribirme ahora</a>
-        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
-            <i class="fas fa-envelope"></i> <a href="mailto:lapis.ac@gmail.com" style="color: white; text-decoration: underline;">lapis.ac@gmail.com</a> ·
-            <i class="fab fa-instagram"></i> <a href="https://www.instagram.com/lapis.asoc.civil/" target="_blank" style="color: white; text-decoration: underline;">@lapis.asoc.civil</a>
-        </p>
-    </div>
-</section>
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 10px;">
+                <a href="https://lapisac.wixsite.com/lapis" target="_blank" style="font-weight: 600;">LAPIS</a> · Laboratorio de Prácticas e Investigaciones Sociales
+            </p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/lapis-asociación-civil-337083209" target="_blank" aria-label="LinkedIn de LAPIS"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/lapis.asoc.civil/" target="_blank" aria-label="Instagram de LAPIS"><i class="fab fa-instagram"></i></a>
+                <a href="https://lapisac.wixsite.com/lapis" target="_blank" aria-label="Sitio web de LAPIS"><i class="fas fa-globe"></i></a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.85rem;">Buenos Aires, Argentina · 20 años impulsando prácticas para la igualdad y la autonomía.</p>
+            <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">“Nunca pongas en duda que un pequeño grupo de ciudadanos comprometidos pueda cambiar el mundo.”</p>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p style="margin-bottom: 10px;">
-            <a href="https://lapisac.wixsite.com/lapis" target="_blank" style="font-weight: 600;">LAPIS</a> · Laboratorio de Prácticas e Investigaciones Sociales
-        </p>
-        <div class="social">
-            <a href="https://www.linkedin.com/in/lapis-asociación-civil-337083209" target="_blank" aria-label="LinkedIn de LAPIS"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/lapis.asoc.civil/" target="_blank" aria-label="Instagram de LAPIS"><i class="fab fa-instagram"></i></a>
-            <a href="https://lapisac.wixsite.com/lapis" target="_blank" aria-label="Sitio web de LAPIS"><i class="fas fa-globe"></i></a>
+            <!-- Créditos del autor -->
+            <div class="author-credit">
+                <p>
+                    <i class="fas fa-code" style="color: var(--accent);"></i> Desarrollo web por 
+                    <a href="https://www.linkedin.com/in/guillermo-coronel/" target="_blank"><strong>Guillermo Coronel</strong></a> · 
+                    <a href="https://github.com/coronelguillermo85-art" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                </p>
+            </div>
         </div>
-        <p style="margin-top: 20px; font-size: 0.85rem;">Buenos Aires, Argentina · 20 años impulsando prácticas para la igualdad y la autonomía.</p>
-        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">“Nunca pongas en duda que un pequeño grupo de ciudadanos comprometidos pueda cambiar el mundo.”</p>
-    </div>
-</footer>
+    </footer>
 
+    <!-- ============================================================ -->
+    <!-- JAVASCRIPT PARA EL MODAL -->
+    <!-- ============================================================ -->
+    <script>
+        // Abrir y cerrar el modal
+        const modal = document.getElementById('modalOverlay');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        // Función global para abrir el modal desde cualquier botón
+        function openModal() {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Evita scroll en el fondo
+        }
+
+        // Cerrar modal con el botón X
+        closeModalBtn.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Cerrar modal si se hace clic fuera del contenido
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Cerrar modal con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // También asociamos el botón "Inscribirme ahora" del hero si existe
+        // (ya está asignado por el onclick en el HTML, pero por si acaso)
+        // y los botones de las modalidades también usan openModal()
+        // No es necesario más, ya que usamos onclick en los botones.
+    </script>
 </body>
 </html>
