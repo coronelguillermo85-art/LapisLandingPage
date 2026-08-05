@@ -1,5 +1,7 @@
 # 🌱 Del Deseo al Proyecto · Landing Page para LAPIS
 
+# 🌱 Del Deseo al Proyecto · Landing Page para LAPIS
+
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-00C853?style=for-the-badge)
@@ -25,7 +27,10 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 - ✅ **Iconografía vectorial** — FontAwesome para una comunicación visual efectiva.
 - ✅ **Tipografía elegante** — combinación de *Inter* y *Playfair Display* desde Google Fonts.
 - ✅ **Enlaces funcionales** — redes sociales, correo electrónico y sitio web de LAPIS completamente integrados.
-- ✅ **Llamados a la acción (CTAs)** — botones estratégicos para incentivar la inscripción.
+- ✅ **Llamados a la acción (CTAs) diferenciados**:
+  - Botón **"Inscribirme"** → abre un **formulario modal integrado** (envío vía FormSubmit o Google Forms).
+  - Botón **"Consultar"** → abre el cliente de correo con destino `lapis.ac@gmail.com`.
+- ✅ **Formulario de inscripción sin backend** — usa FormSubmit para reenviar los datos al correo de LAPIS (fácil de reemplazar por Google Forms).
 
 <br>
 
@@ -33,15 +38,16 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 
 | Sección | Descripción |
 |---------|-------------|
-| **Hero** | Presentación impactante con el eslogan y llamado a la acción principal. |
+| **Hero** | Presentación impactante con el eslogan y CTAs principales. |
 | **¿Qué es?** | Explicación conceptual del programa y su enfoque. |
 | **Componentes** | Los 4 pilares: Trama de formación, Clínica de proyectos, Radar de oportunidades y Comunidad de prácticas. |
 | **Enfoque** | Las 3 dimensiones: Deseo, Diseño y Acción. |
 | **Audiencia + Resultados** | Público objetivo y beneficios concretos. |
-| **Modalidades** | Dos opciones de participación con precios y beneficios. |
+| **Modalidades** | Dos opciones de participación con precios y beneficios. Cada tarjeta tiene botones de inscripción y consulta. |
 | **Testimonios** | Voces reales de participantes. |
 | **Equipo** | Dirección del programa a cargo de Sabrina Landoni. |
-| **CTA Final** | Invitación a inscribirse con acceso directo por email. |
+| **CTA Final** | Invitación a inscribirse con ambos botones (inscripción y consulta). |
+| **Modal de inscripción** | Formulario emergente que se abre al hacer clic en cualquier botón de inscripción. |
 
 <br>
 
@@ -51,13 +57,7 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 - **CSS3** — Estilos, animaciones y diseño responsive (sin frameworks).
 - **FontAwesome** — Librería de iconos vectoriales.
 - **Google Fonts** — Tipografías *Inter* y *Playfair Display*.
-
-<br>
-
-## 🚀 Demo en vivo
-
-👉 [**Ver landing page en Vercel**](https://lapis-landing-page.vercel.app/)  
-*(Reemplazá este enlace con el que te genere Vercel cuando lo subas)*
+- **FormSubmit** — Servicio gratuito para enviar correos desde el formulario sin necesidad de backend (puede reemplazarse por Google Forms).
 
 <br>
 
