@@ -460,7 +460,7 @@
             text-decoration: underline;
         }
 
-        /* ===== MODAL DEL FORMULARIO (OPCIONAL) ===== */
+        /* ===== MODAL DEL FORMULARIO ===== */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -594,9 +594,8 @@
                 <i class="fas fa-arrow-right" style="margin-right: 12px;"></i> No es un curso de proyectos. Es un espacio para hacerlos posibles.
             </div>
             <div class="hero-actions">
-                <!-- Botón INSCRIPCIÓN → abre modal con formulario (o redirige a Google Form) -->
-                <button class="btn" id="openModalBtn"><i class="fas fa-pen"></i> Inscribirme ahora</button>
-                <!-- Botón CONSULTAS → mailto -->
+                <!-- ✅ BOTÓN CORREGIDO: usa onclick igual que los demás -->
+                <button class="btn" onclick="openModal()"><i class="fas fa-pen"></i> Inscribirme ahora</button>
                 <a href="mailto:lapis.ac@gmail.com?subject=Consulta%20sobre%20Del%20Deseo%20al%20Proyecto" class="btn btn-outline"><i class="fas fa-envelope"></i> Consultar</a>
             </div>
             <blockquote class="hero-quote">
@@ -835,14 +834,7 @@
             <h2><i class="fas fa-pen" style="color: var(--primary);"></i> Formulario de inscripción</h2>
             <p style="margin-bottom: 20px; color: var(--text-light);">Completá tus datos y nos pondremos en contacto para confirmar tu lugar.</p>
 
-            <!-- 
-                ⚠️ IMPORTANTE: 
-                Podés reemplazar este formulario por el embed de Google Forms o cualquier otro.
-                Si usás Google Forms, copiá el código <iframe> que te da Google y reemplazá todo este bloque.
-                También podés cambiar el action a la URL de tu backend si tenés uno.
-            -->
             <form id="inscripcionForm" action="https://formsubmit.co/lapis.ac@gmail.com" method="POST">
-                <!-- Opcional: ocultar el campo de asunto -->
                 <input type="hidden" name="_subject" value="Nueva inscripción - Del Deseo al Proyecto">
                 <input type="hidden" name="_captcha" value="false">
 
@@ -890,7 +882,6 @@
             <p style="margin-top: 20px; font-size: 0.85rem;">Buenos Aires, Argentina · 20 años impulsando prácticas para la igualdad y la autonomía.</p>
             <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.5;">“Nunca pongas en duda que un pequeño grupo de ciudadanos comprometidos pueda cambiar el mundo.”</p>
 
-            <!-- Créditos del autor -->
             <div class="author-credit">
                 <p>
                     <i class="fas fa-code" style="color: var(--accent);"></i> Desarrollo web por 
@@ -902,16 +893,16 @@
     </footer>
 
     <!-- ============================================================ -->
-    <!-- JAVASCRIPT PARA EL MODAL -->
+    <!-- JAVASCRIPT (CORREGIDO) -->
     <!-- ============================================================ -->
     <script>
-        // Abrir y cerrar el modal
+        // Elementos del modal
         const modal = document.getElementById('modalOverlay');
-        const openModalBtn = document.getElementById('openModalBtn');
         const closeModalBtn = document.getElementById('closeModalBtn');
 
-        // Función global para abrir el modal desde cualquier botón
+        // Función global para ABRIR el modal (usada por todos los botones de inscripción)
         function openModal() {
+            console.log('Modal abierto ✅'); // Para debug
             modal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Evita scroll en el fondo
         }
@@ -937,11 +928,6 @@
                 document.body.style.overflow = '';
             }
         });
-
-        // También asociamos el botón "Inscribirme ahora" del hero si existe
-        // (ya está asignado por el onclick en el HTML, pero por si acaso)
-        // y los botones de las modalidades también usan openModal()
-        // No es necesario más, ya que usamos onclick en los botones.
     </script>
 </body>
 </html>
