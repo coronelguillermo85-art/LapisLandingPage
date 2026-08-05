@@ -1,7 +1,5 @@
 # 🌱 Del Deseo al Proyecto · Landing Page para LAPIS
 
-# 🌱 Del Deseo al Proyecto · Landing Page para LAPIS
-
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-00C853?style=for-the-badge)
@@ -28,9 +26,9 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 - ✅ **Tipografía elegante** — combinación de *Inter* y *Playfair Display* desde Google Fonts.
 - ✅ **Enlaces funcionales** — redes sociales, correo electrónico y sitio web de LAPIS completamente integrados.
 - ✅ **Llamados a la acción (CTAs) diferenciados**:
-  - Botón **"Inscribirme"** → abre un **formulario modal integrado** (envío vía FormSubmit o Google Forms).
+  - Botón **"Inscribirme"** → abre un **formulario modal integrado** (envío vía FormSubmit).
   - Botón **"Consultar"** → abre el cliente de correo con destino `lapis.ac@gmail.com`.
-- ✅ **Formulario de inscripción sin backend** — usa FormSubmit para reenviar los datos al correo de LAPIS (fácil de reemplazar por Google Forms).
+- ✅ **Formulario de inscripción sin backend** — usa FormSubmit para reenviar los datos al correo de LAPIS.
 
 <br>
 
@@ -57,7 +55,7 @@ Este proyecto forma parte de mi portafolio profesional como desarrollador front-
 - **CSS3** — Estilos, animaciones y diseño responsive (sin frameworks).
 - **FontAwesome** — Librería de iconos vectoriales.
 - **Google Fonts** — Tipografías *Inter* y *Playfair Display*.
-- **FormSubmit** — Servicio gratuito para enviar correos desde el formulario sin necesidad de backend (puede reemplazarse por Google Forms).
+- **FormSubmit** — Servicio gratuito para enviar correos desde el formulario sin necesidad de backend.
 
 <br>
 
